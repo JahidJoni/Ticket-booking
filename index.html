@@ -54,11 +54,11 @@
                 <div class="inputs">
                     <div class="input-group">
                         <label" for="">Departure</label>
-                            <input class="inp-style" type="date" name="">
+                            <input class="inp-style" type="date" value="2021-02-02" name="">
                     </div>
                     <div class="input-group">
                         <label for="">Return</label>
-                        <input class="inp-style" type="date" name="">
+                        <input class="inp-style" type="date" value="2021-05-02" name="">
                     </div>
                 </div>
                 <div class="input-group f-class">
@@ -118,11 +118,12 @@
                 <h1>Success! your booking granted!</h1>
                 <h3>You ordered <span id="order"> 0 </span> ticket</h3> <br>
                 <h6>We wish for your best journey!</h6>
+                <h6>Thank You!</h6>
             </div>
         </section>
     </main>
 
-    <!--Thank You-->
+    <!--End of html-->
 
     <script>
         //function for plus minus button
@@ -156,7 +157,7 @@
             handleTicketChange('economy', false);
         });
 
-        //total calculation
+        //total calculation function
         function calculateTotal() {
             const firstClassCount = document.getElementById('firstClass-quantity').value;
             const firstClassNumber = parseInt(firstClassCount);
@@ -185,7 +186,7 @@
             const economyNumber = parseInt(economyCount);
 
             if (firstClassNumber <= 0 && economyNumber <= 0) {
-                window.alert("First you have to select at least 1 ticket");
+                window.alert("please select at least 1 ticket first!");
             }
             else {
             const main = document.getElementById("main").style.display = "none";
@@ -196,8 +197,7 @@
             }
         })
     </script>
-
-
+    <!--Thank you-->
 </body>
 
 </html>
