@@ -174,7 +174,8 @@
             document.getElementById('total').innerText = Total;
         }
 
-        // booking button operation
+        // Bonus section starts here
+        // booking button operation & confirmation massage for user
         const booking = document.getElementById("booking");
         booking.addEventListener("click", function () {
             const firstClassCount = document.getElementById('firstClass-quantity').value;
@@ -183,28 +184,17 @@
             const economyCount = document.getElementById('economy-quantity').value;
             const economyNumber = parseInt(economyCount);
 
-            if (firstClassNumber < 0 && economyNumber < 0) {
-                window.alert("sometext");
+            if (firstClassNumber <= 0 && economyNumber <= 0) {
+                window.alert("First you have to select at least 1 ticket");
             }
-            if{
+            else {
             const main = document.getElementById("main").style.display = "none";
             const massage = document.getElementById("massage").style.display = "block";
-            }
-        })
-
-        //Confirmation massage for user
-        const massage = document.getElementById("booking");
-        massage.addEventListener("click", function(){
-            const firstClassCount = document.getElementById('firstClass-quantity').value;
-            const firstClassNumber = parseInt(firstClassCount);
-
-            const economyCount = document.getElementById('economy-quantity').value;
-            const economyNumber = parseInt(economyCount);
 
             totalTicket = firstClassNumber + economyNumber;
             document.getElementById("order").innerText = totalTicket;
+            }
         })
-
     </script>
 
 
